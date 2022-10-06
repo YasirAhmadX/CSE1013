@@ -4,9 +4,9 @@
 int main() {
     int age;
     float height,weight;
-    char name[20],RegNo[9],Gender[1],Address[50],MobileNo[10];
+    char name[20],RegNo[9+1],Gender[1+1],Address[50],MobileNo[10+1];//adding room for null characters.
     printf("Enter name of the student: ");
-    scanf("%s",name);
+    scanf("%s",name);//beware string will terminate at "<space>";scanf("%[^\n]%*c",s[i].name); should do the job
     printf("Enter RegNo: ");
     scanf("%s",RegNo);
     printf("Enter Age: ");
