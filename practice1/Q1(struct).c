@@ -4,7 +4,7 @@
 struct stud_details{
     int age;
     float height,weight;
-    char name[20],RegNo[9],Gender[1],Address[50],MobileNo[10];
+    char name[20],RegNo[9+1],Gender[1+1],Address[50],MobileNo[10+1]; //adding room for null characters.
 };
 
 int main() {
@@ -15,7 +15,7 @@ int main() {
     for(int i=0;i<n;i++){
         printf("-------------------\n");
         printf("\nEnter name of the student %d: ",i+1);
-        scanf("%s",s[i].name);
+        scanf("%s",s[i].name); //beware string will terminate at "<space>";scanf("%[^\n]%*c",s[i].name); should do the job
         printf("Enter RegNo: ");
         scanf("%s",s[i].RegNo);
         printf("Enter Age: ");
