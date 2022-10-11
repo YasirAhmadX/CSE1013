@@ -1,4 +1,4 @@
-//n natural numbers
+//n natural numbers with while loop
 #include <stdio.h>
 
 int main()
