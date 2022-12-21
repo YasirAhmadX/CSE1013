@@ -3,7 +3,7 @@
 
 struct word{
 	char letters[20];
-	int occurence;
+	int occurrence;
 };
 
 int main(){
@@ -26,14 +26,14 @@ int main(){
 			int r=0,a=0;
 			for(a=0;a<j;a++){
 				if(strcmp(words[a].letters,Word)==0){
-					words[a].occurence++;
+					words[a].occurrence++;
 					r=1;
 				}
 			}
 			if(r==0){
 				j++;
 				strcpy(words[j].letters,Word);
-				words[j].occurence=1;
+				words[j].occurrence=1;
 			}
 		}
 		else{
@@ -43,8 +43,8 @@ int main(){
 		}
 	}
 	for(i=0;i<=j;i++){
-		if(words[i].occurence>0){
-			printf("%s -> %d\n",words[i].letters,words[i].occurence);
+		if(words[i].occurrence>0){
+			printf("%s -> %d\n",words[i].letters,words[i].occurrence);
 		}
 	}
 }
